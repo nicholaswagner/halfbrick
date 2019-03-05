@@ -1,0 +1,57 @@
+// Bootstrap overrides
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: map-get($theme, color-0);
+  border-color: map-get($theme, color-0);
+}
+
+.btn-outline-primary {
+  border-width: 1.25px;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: map-get($theme, color-0);
+  background-color: white;
+  border-color: map-get($theme, color-0);
+}
+
+button {
+  font-size: 0.9em;
+  font-family: map-get($theme, font);
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: map-get($theme, font-weight-bold);
+  padding: 0.75em 6em 0.75em 6em;
+}
+
+.btn-brand-outline {
+  display: inline-block;
+  font-size: 0.9em;
+  color: map-get($theme, color-3);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(121, 157, 196, 1);
+  font-family: map-get($theme, font);
+  font-weight: map-get($theme, font-weight-bold);
+  // padding: 0.75em 6em 0.75em 6em;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: height 0.35s ease 1s linear;
+  -moz-transition: height 0.35s ease 1s linear;
+  -o-transition: height 0.35s ease 1s linear;
+  -ms-transition: height 0.35s ease 1s linear;
+  transition: height 0.35s ease 1s linear;
+  -webkit-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}

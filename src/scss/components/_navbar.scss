@@ -1,0 +1,150 @@
+// .navbar {
+//   padding: 0;
+// }
+
+.nav-link {
+  padding: 0;
+}
+
+.brand_logo {
+  // ITS OVER 9000!!!!
+  justify-content: start;
+  z-index: 9005;
+  width: 217px;
+  max-width: 70%;
+  height: 48px;
+  overflow: visible;
+  background-repeat: no-repeat;
+  background-image: url("../images/sca_logo.svg");
+  image-rendering: pixelated;
+  &:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.site_navigation {
+  z-index: 12000;
+  height: 48px;
+  max-height: 48px;
+  overflow: visible;
+  /*  This is a fancy svg gradient  */
+  // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='36' height='36' viewBox='0 0 36 36'><path fill='#2b3745' d='M0 5h36v27H0z' opacity='.85'/></svg>");
+  background-image: url("../images/site_navigation.png");
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  vertical-align: middle;
+  margin-bottom: -5px;
+  #desktop_nav_id {
+    background-color: none;
+    height: 100%;
+    ul {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      li {
+        display: block;
+        margin: 2px 0 0 0;
+        padding: 3px 0 0 0;
+        height: 38px;
+        &:hover {
+          $c: map-get($theme, color-5);
+          background-color: rgba($c, 0.1);
+          cursor: pointer;
+          a {
+            cursor: pointer;
+            color: map-get($theme, color-5);
+            font-size: $brand-nav-h-font-size;
+          }
+        }
+        &.active {
+          background-color: map-get($theme, color-5);
+          a {
+            color: map-get($theme, color-2);
+            font-weight: map-get($theme, font-weight-normal);
+            font-size: $brand-nav-h-font-size;
+          }
+        }
+        a {
+          color: white;
+          &:link,
+          &:visited,
+          &:active,
+          &:hover {
+            text-decoration: none;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0em 1em 0 1em;
+            font-size: $brand-nav-h-font-size;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile_navbar {
+  height: 48px;
+  overflow: visible;
+  z-index: 11000;
+  /*  This is a fancy svg gradient  */
+  background-image: url("../images/site_navigation.png");
+  //background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0' y='7' width='100%' height='36' style='fill:rgba(43,55,69,0.85);'></rect></svg>");
+  background-size: contain;
+  background-position: center;
+  align-items: center;
+  margin-bottom: -5px;
+
+  .navbar-toggler {
+    border: none !important;
+    outline: 0 !important;
+  }
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(43, 55, 69, 0.95);
+  padding: 0;
+  margin: 0;
+  font-size: 12pt;
+  font-weight: map-get($theme, font-weight-light);
+
+  ul:first-child {
+    // margin-top: 25px;
+  }
+  ul:last-child {
+    // margin-bottom: 25px;
+  }
+  ul > li {
+    padding: 10px;
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: map-get($theme, bg-color);
+      text-decoration: none;
+      display: block;
+    }
+    a:hover {
+    }
+  }
+  ul > li:hover {
+    $c: map-get($theme, color-5);
+    background-color: rgba($c, 0.1);
+    cursor: pointer;
+    a {
+      cursor: pointer;
+      color: map-get($theme, color-5);
+    }
+  }
+  ul > li.active {
+    a {
+      font-weight: map-get($theme, font-weight-bold);
+      color: map-get($theme, color-0) !important;
+    }
+    background-color: map-get($theme, color-5);
+  }
+}

@@ -1,0 +1,51 @@
+/*  Prototyping Area  */
+
+$theme: (
+  bg-color: white,
+  color-0: rgba(30, 30, 30, 1),
+  // #1e1e1e,
+  color-1: rgba(43, 55, 69, 1),
+  // #2b3745,
+  color-2: rgba(74, 96, 120, 1),
+  // #4a6078,
+  color-3: rgba(62, 126, 196, 1),
+  // #3e7ec4,
+  color-4: rgba(121, 157, 196, 1),
+  // #799dc4,
+  color-5: rgba(150, 201, 255, 1),
+  // #96c9ff,
+  color-6: rgba(201, 216, 231, 1),
+  // #c9d8e7,
+  font: #{"Roboto",
+  "sans-serif"},
+  font-weight-light: 300,
+  font-weight-normal: 400,
+  font-weight-bold: 700,
+  body-text-size: 0.75em,
+  h4-text-size: 26px,
+  h5-text-size: 1.05em
+);
+
+// todo see if i'm still using these
+$brand-container-content-w: 700px;
+$brand-nav-h-font-size: 16px !default;
+
+// This is deprec'd... if not already, should be moving to native stack first approach.
+$brand-font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
+
+$brand-font-light: 300;
+$brand-font-regular: 400 !important;
+$brand-font-bold: 700;
+
+$brand-h1-size: 64px;
+
+$brand-bg-color: white !default;
+$brand-color-0: rgba(30, 30, 30, 1) !default;
+$brand-color-1: rgba(43, 55, 69, 1) !default;
+$brand-color-2: rgba(74, 96, 120, 1) !default;
+$brand-color-3: rgba(62, 126, 196, 1) !default;
+$brand-color-4: rgba(121, 157, 196, 1) !default;
+$brand-color-5: rgba(150, 201, 255, 1) !default;
+$brand-color-6: rgba(201, 216, 231, 1) !default;

@@ -1,0 +1,160 @@
+$sp-font-size: 1.65em; //30px;
+$sp-counter-w: 1em; //30px;
+$sp-counter-h: $sp-font-size * 0.95; //32px;
+
+$flapline: white;
+
+//  --------- first
+@keyframes slidein {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.splitflap-display {
+  display: flex;
+  flex-basis: auto;
+  padding: 0;
+  margin: 0; //3em 0em 1em 0em;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  color: map-get($theme, color-1);
+  font-family: map-get($theme, font);
+  font-weight: map-get($theme, font-weight-bold);
+  span {
+    font-size: $sp-font-size * 1.25;
+  }
+}
+
+.split-flap {
+  flex-basis: auto;
+  padding: 0;
+  width: $sp-counter-w; //60px;
+  height: $sp-counter-h; //64px;
+  font-size: $sp-font-size;
+  font-family: map-get($theme, font);
+  font-weight: map-get($theme, font-weight-bold);
+  border-radius: 0.1em 0.1em;
+  position: relative;
+  margin: 0;
+  line-height: $sp-counter-h;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.split-flap:after {
+  flex-basis: auto;
+  padding: 0;
+  content: " ";
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate3d(0, -50%, 0);
+}
+
+// .split-flap:before {
+//   content: attr(data-letter);
+//   padding: 0;
+//   width: 100%;
+//   height: 100%;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate3d(-50%, -50%, 0);
+//   position: absolute;
+//   /*  transition: height 100ms linear;*/
+//   animation-duration: 120ms;
+//   animation-delay: attr(data-animation-delay);
+//   animation-name: slidein;
+//   animation-iteration-count: 6;
+//   overflow: hidden;
+// }
+
+//  ---------@keyframes slidein {
+@keyframes slidein {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.splitflap-display {
+  display: flex;
+  flex-basis: auto;
+  padding: 0;
+  margin: 0; //3em 0em 1em 0em;
+  width: 100%;
+  height: 100%;
+  color: map-get($theme, color-1);
+  font-family: map-get($theme, font);
+  font-weight: map-get($theme, font-weight-bold);
+  span {
+    font-size: $sp-font-size * 1.25;
+  }
+}
+
+.split-flap {
+  flex-basis: auto;
+  width: $sp-counter-w; //60px;
+  height: $sp-counter-h; //64px;
+  padding: 0;
+  //border: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  //margin: 0 20px 20px 0;
+  margin: 0.1em;
+  line-height: $sp-counter-h;
+  text-align: center;
+  box-sizing: border-box;
+  //box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  background-color: map-get($theme, color-5);
+}
+
+.split-flap:after {
+  flex-basis: auto;
+  content: " ";
+  width: 100%;
+  height: 1px;
+  padding: 0;
+  background-color: $flapline;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate3d(0, -50%, 0);
+}
+.split-flap:before {
+  flex-basis: auto;
+  content: attr(data-letter);
+  background-color: $brand-color-5;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  /*  transition: height 100ms linear;*/
+  animation-name: slidein;
+
+  animation-duration: 250ms;
+  animation-delay: attr(data-animation-delay);
+  animation-iteration-count: 1;
+  overflow: hidden;
+}
+
+/*.split-flap.is-changing:before {
+  height: 0;
+}*/

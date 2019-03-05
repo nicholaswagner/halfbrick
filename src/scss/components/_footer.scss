@@ -1,0 +1,65 @@
+#footer {
+  margin: auto;
+  padding: 26px 0 0 0;
+  text-align: center;
+  height: 129px;
+  color: $brand-color-0;
+  background-color: $brand-color-5;
+  background-image: url("../images/sca_seal.svg");
+  background-position: center center;
+  background-size: 112px 112px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  line-height: 24px;
+  font-size: 16px;
+
+  .name {
+    display: block;
+    font-weight: $brand-font-bold;
+  }
+  .address {
+    display: block;
+    font-weight: $brand-font-regular;
+    a,
+    a:visited,
+    a:focus {
+      text-decoration: none;
+      cursor: pointer;
+
+      color: rgb(30, 30, 30);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .certification {
+    padding-top: 0;
+    font-weight: $brand-font-light;
+    font-style: italic;
+    display: block;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 35px;
+    .address {
+      font-size: 13px;
+    }
+    .certification {
+      font-size: 10px;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: $brand-font-regular;
+  padding: 20px 20% 20px 20%;
+  width: auto;
+  color: white !important;
+  display: block;
+  background-color: #2b3745; //map-get($theme, color-0);
+  @include media-breakpoint-down(sm) {
+    font-size: 8px;
+  }
+}

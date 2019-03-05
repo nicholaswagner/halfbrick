@@ -1,0 +1,74 @@
+.hero-image {
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 3em;
+  height: 490px;
+  z-index: 0;
+
+  div {
+    h1 {
+      margin-top: 100px;
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      display: block;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: $brand-font-light !important;
+      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 0.18em;
+    div h1 {
+      margin-top: 150px;
+    }
+    .not-the-face {
+      h1 {
+        margin-top: 200px;
+      }
+      h2 {
+      }
+    }
+    height: 489px;
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .not-the-face {
+    h1 {
+      font-size: 60px;
+      line-height: 64px;
+    }
+  }
+}
+
+// #mobile-lead-in {
+//   div h1 {
+//     color: rgb(33, 37, 41);
+//   }
+//   div h2 {
+//     font-size: 24px;
+//     font-weight: $brand-font-light !important;
+//     color: rgb(33, 37, 41);
+//   }
+
+//   @include media-breakpoint-down(sm) {
+//     div h1 {
+//       font-size: 42px;
+//       line-height: 38px;
+//     }
+//   }
+//   @include media-breakpoint-only(sm) {
+//     div h1 {
+//       font-size: 60px;
+//       line-height: 55px;
+//     }
+//   }
+// }

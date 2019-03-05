@@ -1,0 +1,49 @@
+version: "3.6"
+# If you need a container to expose multiple ports, read about it here: https://github.com/jwilder/nginx-proxy#multiple-ports
+
+services:
+  # proxy:
+  #   image: jwilder/nginx-proxy:alpine
+  #   container_name: nginx-proxy
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - /var/run/docker.sock:/tmp/docker.sock:ro
+  mysql:
+    image: mysql:5.7
+    container_name: ${MYSQL_CONTAINER_NAME}
+    volumes:
+      - ./.db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+  # adminer:
+  #   image: adminer
+  #   container_name: adminer
+  #   restart: always
+  #   expose:
+  #     - "8080"
+  #   environment:
+  #     - VIRTUAL_HOST=${ADMINER_DOMAIN:-adminer.local}
+  wordpress:
+    image: wordpress
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - mysql
+    container_name: wordpress
+    volumes:
+      - ./themes:/var/www/html/wp-content/themes
+      - ./plugins:/var/www/html/wp-content/plugins
+      - ./uploads:/var/www/html/wp-content/uploads
+    environment:
+      WORDPRESS_DB_HOST: ${MYSQL_CONTAINER_NAME}
+      WORDPRESS_DB_USER: $MYSQL_USER
+      WORDPRESS_DB_PASSWORD: $MYSQL_PASSWORD
+      WORDPRESS_DB_NAME: $MYSQL_DATABASE
+      WORDPRESS_DEBUG: ${WORDPRESS_DEBUG:-0}
+      VIRTUAL_HOST: wordpress.local

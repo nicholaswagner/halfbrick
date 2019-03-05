@@ -1,0 +1,37 @@
+.watermark {
+  background-image: url("../images/watermark.svg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  image-rendering: pixelated;
+  background-size: 100% auto;
+  background-position-x: 0;
+  background-position-y: 10%;
+  // @include media-breakpoint-only(xs) {
+  //   background-size: 400px;
+  //   background-position-x: -140px;
+  //   background-position-y: 670px;
+  // }
+
+  // @include media-breakpoint-only(sm) {
+  //   background-size: 760px;
+  //   background-position-x: -270px;
+  //   background-position-y: 410px;
+  // }
+
+  // @include media-breakpoint-only(md) {
+  //   background-size: 710px;
+  //   background-position-x: -280px;
+  //   background-position-y: 410px;
+  // }
+
+  // @include media-breakpoint-only(lg) {
+  //   background-size: 1000px;
+  //   background-position-x: -350px;
+  //   background-position-y: 350px;
+  // }
+  // @include media-breakpoint-only(xl) {
+  //   background-size: 1200px;
+  //   background-position-x: -410px;
+  //   background-position-y: 380px;
+  // }
+}

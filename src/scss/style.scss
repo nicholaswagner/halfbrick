@@ -1,0 +1,54 @@
+// you could also just use the CDN ...
+//@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "assets";
+@import "variables";
+@import "mixins";
+
+@import "components/assets";
+
+.brand-fl {
+  font-weight: $brand-font-light;
+}
+.brand-fr {
+  font-weight: $brand-font-regular;
+}
+.brand-fb {
+  font-weight: $brand-font-bold;
+}
+
+.brand-color-0 {
+  color: $brand-color-0;
+}
+.brand-color-1 {
+  color: $brand-color-1;
+}
+.brand-color-2 {
+  color: $brand-color-2;
+}
+
+body {
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: -0.39;
+  text-align: justify;
+  text-justify: inter-word;
+
+  font-family: $brand-font-family;
+  background-color: white;
+  font-weight: $brand-font-regular;
+  color: rgba(33, 37, 41, 100);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: $brand-h1-size;
+  font-family: $brand-font-family;
+  font-weight: $brand-font-bold;
+  letter-spacing: -0.96px;
+  line-height: 68px;
+}

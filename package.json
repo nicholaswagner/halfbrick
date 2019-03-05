@@ -1,0 +1,47 @@
+{
+  "name": "halfbrick",
+  "version": "0.5.0",
+  "description": "my general starter kit for projects- wip",
+  "main": "index.js",
+  "author": "Nicholas <nicholas@secretsignal.com>",
+  "private": true,
+  "scripts": {
+    "postinstall": "chmod +x ./db.sh",
+    "build": "NODE_ENV=production webpack --config ./config/production.webpack.babel.js",
+    "dev": "NODE_ENV=production webpack --config ./config/development.webpack.babel.js",
+    "browser-sync": "browser-sync start --proxy 'http://dev.local' --files 'dist/**/*'",
+    "save-db": "./db.sh save",
+    "restore-db": "./db.sh restore"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "bootstrap": "^4.2.1",
+    "browser-sync": "^2.26.3",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.1.0",
+    "dotenv": "^6.2.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "smoothscroll-polyfill": "^0.4.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "dependencies": {
+    "browser-sync-webpack-plugin": "^2.2.2"
+  }
+}
